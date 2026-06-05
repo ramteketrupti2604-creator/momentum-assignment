@@ -175,7 +175,7 @@
 }
 
 /* ========================= */
-/* TABLET */
+/* MOBILE RESPONSIVE */
 /* ========================= */
 
 @media (max-width: 992px) {
@@ -209,10 +209,6 @@
   }
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
 @media (max-width: 768px) {
 
   .hero {
@@ -221,7 +217,6 @@
   }
 
   /* REMOVE EXTRA CURVE LINES */
-
   .left-curves svg path:nth-child(2),
   .left-curves svg path:nth-child(4),
   .left-curves svg path:nth-child(6),
@@ -230,9 +225,9 @@
   }
 
   .left-curves {
-    left: -25px;
-    top: 32%;
-    transform: scale(0.65);
+    left: -20px;
+    top: 35%;
+    transform: scale(0.7);
   }
 
   .hero-content {
@@ -295,7 +290,6 @@
   }
 
   /* LAST TWO PEOPLE IMAGE */
-
   .right-group {
     display: flex;
     flex-direction: column;
@@ -315,10 +309,6 @@
     transform: translateY(10px);
   }
 }
-
-/* ========================= */
-/* SMALL MOBILE */
-/* ========================= */
 
 @media (max-width: 480px) {
 
@@ -354,32 +344,5 @@
   .purple-shape-img {
     width: 30px;
     height: 30px;
-  }
-}
-
-/* ========================= */
-/* NAVBAR MOBILE FIX */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: flex !important;
-    position: fixed;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    padding: 30px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    z-index: 999;
-  }
-
-  .nav-links li {
-    font-size: 16px;
-    font-weight: 500;
   }
 }
