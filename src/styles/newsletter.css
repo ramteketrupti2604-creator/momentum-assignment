@@ -1,12 +1,17 @@
+/* src/styles/newsletter.css */
+
 .newsletter {
   position: relative;
   background: #dcead9;
-  padding: 80px 70px 40px;
+
+  padding: 90px 60px 40px;
+
   overflow: hidden;
   font-family: "Inter", sans-serif;
 }
 
 /* TOP CURVE */
+
 .top-curve {
   position: absolute;
   top: 0;
@@ -14,111 +19,277 @@
 }
 
 /* PURPLE SHAPE */
+
 .purple-shape-news {
   position: absolute;
+
   right: 40px;
   top: 70px;
+
   width: 120px;
+
   transform: rotate(-8deg);
 }
 
 /* CENTER CONTENT */
+
 .newsletter-content {
   text-align: center;
   margin-bottom: 70px;
+
+  position: relative;
+  z-index: 2;
 }
 
 .newsletter-content h2 {
   font-size: 78px;
   line-height: 0.95;
-  color: #111;
+
+  color: #111111;
   font-weight: 500;
+
   margin-bottom: 18px;
+
+  letter-spacing: -2px;
 }
 
 .newsletter-content p {
   font-size: 14px;
-  color: #555;
+  line-height: 1.8;
+
+  color: #555555;
+
   margin-bottom: 26px;
 }
 
 .newsletter-content button {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
+
   border: none;
   border-radius: 40px;
+
   padding: 14px 34px;
+
   font-size: 14px;
+  font-weight: 500;
+
   cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.newsletter-content button:hover {
+  transform: translateY(-2px);
 }
 
 /* DIVIDER */
+
 .newsletter-line {
   width: 100%;
   height: 1px;
+
   background: #9ca3af;
+
   margin-bottom: 50px;
 }
 
 /* FOOTER */
+
 .newsletter-footer {
   display: flex;
   justify-content: space-between;
+
   gap: 40px;
+
   margin-bottom: 80px;
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
+
   gap: 14px;
 }
 
 .footer-column h4 {
   font-size: 20px;
-  color: #222;
+  font-weight: 600;
+
+  color: #222222;
+
   margin-bottom: 10px;
 }
 
 .footer-column a,
 .footer-column p {
   font-size: 14px;
-  color: #333;
-  text-decoration: none;
   line-height: 1.7;
+
+  color: #333333;
+
+  text-decoration: none;
 }
 
 /* COPYRIGHT */
+
 .copyright {
   text-align: center;
+
   font-size: 13px;
-  color: #555;
+  line-height: 1.6;
+
+  color: #555555;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px) {
 
   .newsletter {
-    padding: 60px 25px 30px;
+    padding: 70px 35px 35px;
   }
 
   .newsletter-content h2 {
-    font-size: 46px;
+    font-size: 58px;
+    line-height: 1;
+  }
+
+  .newsletter-footer {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .purple-shape-news {
+    width: 95px;
+    right: 20px;
+    top: 55px;
+  }
+
+  .top-curve {
+    left: 28%;
+    width: 120px;
+  }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .newsletter {
+    padding: 60px 22px 28px;
+  }
+
+  .newsletter-content {
+    margin-bottom: 50px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 42px;
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+  .newsletter-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .newsletter-content button {
+    padding: 12px 28px;
+    font-size: 13px;
   }
 
   .newsletter-footer {
     flex-direction: column;
+
     gap: 35px;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+
+  .footer-column {
+    align-items: center;
+  }
+
+  .footer-column h4 {
+    font-size: 18px;
+  }
+
+  .footer-column a,
+  .footer-column p {
+    font-size: 13px;
   }
 
   .purple-shape-news {
-    width: 80px;
-    right: 10px;
+    width: 75px;
+
+    right: 8px;
     top: 40px;
   }
 
   .top-curve {
-    left: 20%;
-    width: 100px;
+    left: 18%;
+    width: 90px;
+  }
+
+  .newsletter-line {
+    margin-bottom: 40px;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .newsletter {
+    padding: 50px 16px 24px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 34px;
+  }
+
+  .newsletter-content p {
+    font-size: 12px;
+  }
+
+  .newsletter-content button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .purple-shape-news {
+    width: 60px;
+
+    top: 28px;
+    right: 4px;
+  }
+
+  .top-curve {
+    width: 70px;
+    left: 12%;
+  }
+
+  .footer-column h4 {
+    font-size: 17px;
+  }
+
+  .footer-column a,
+  .footer-column p {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 12px;
   }
 }

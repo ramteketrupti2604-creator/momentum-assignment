@@ -38,12 +38,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 20px; /* GAP KAM */
   position: relative;
 }
 
 .top-row {
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 
 /* TEXT */
@@ -142,70 +142,97 @@
 .triangle {
   position: absolute;
   background: #f87171;
-  z-index: 3;
+  z-index: 4;
 }
 
 /* TOP IMAGE TRIANGLE */
-/* IMAGE KO TOUCH KAR RAHA HAI */
+/* IMAGE KO CHIPKA HUA */
 
 .top-triangle {
   width: 78px;
   height: 78px;
-  top: 12px;
-  right: 92px;
+
+  top: 18px;
+  right: 78px;
 
   clip-path: polygon(100% 0, 0 20%, 78% 100%);
 }
 
 /* BOTTOM IMAGE TOP LEFT TRIANGLE */
-/* IMAGE KO CHIPKA HUA */
 
 .left-triangle {
   width: 68px;
   height: 68px;
 
-  top: 18px;
-  left: 78px;
+  top: 14px;
+  left: 72px;
 
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 /* BOTTOM IMAGE RIGHT TRIANGLE */
-/* IMAGE KE NICHE RIGHT KO TOUCH */
 
 .right-triangle {
   width: 70px;
   height: 70px;
 
-  bottom: -6px;
-  right: 78px;
+  bottom: 0;
+  right: 72px;
 
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 
-/* RED CURVE LINE */
+/* CONNECTING ORANGE CURVE LINE */
+/* DONO IMAGE KO TOUCH KAR RAHI */
 
 .curve-line {
   position: absolute;
-  top: 180px;
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
-  width: 920px;
-  height: 520px;
+  width: 820px;
+  height: 470px;
   z-index: 1;
 }
 
-/* RESPONSIVE */
+.curve-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+.curve-line path {
+  stroke: #ef4444;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
 
 @media (max-width: 992px) {
+
+  .about {
+    padding: 100px 24px;
+  }
 
   .about-row {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+
+  .top-row {
+    margin-bottom: 70px;
+  }
+
+  .about-text h2 {
+    font-size: 42px;
   }
 
   .about-text p {
     margin: 0 auto 30px;
+    max-width: 600px;
   }
 
   .about-text a {
@@ -216,35 +243,151 @@
     display: none;
   }
 
-  .top-row {
-    margin-bottom: 80px;
+  .circle-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .top-triangle {
+    right: 35px;
+  }
+
+  .left-triangle {
+    left: 35px;
+  }
+
+  .right-triangle {
+    right: 35px;
   }
 }
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
 
 @media (max-width: 768px) {
 
   .about {
-    padding: 80px 20px;
+    padding: 80px 18px;
+  }
+
+  .top-blur {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-row {
+    gap: 34px;
+  }
+
+  .top-row {
+    margin-bottom: 60px;
   }
 
   .about-text h2 {
-    font-size: 36px;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-text a {
+    font-size: 13px;
+  }
+
+  .read-line {
+    width: 80px;
+  }
+
+  /* PEOPLE IMAGE GAP KAM */
+
+  .image-box {
+    margin-top: 10px;
   }
 
   .circle-image {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
+  }
+
+  /* ICONS IMAGE KO TOUCH */
+
+  .top-triangle {
+    width: 52px;
+    height: 52px;
+
+    top: 10px;
+    right: 18px;
+  }
+
+  .left-triangle {
+    width: 48px;
+    height: 48px;
+
+    top: 10px;
+    left: 18px;
+  }
+
+  .right-triangle {
+    width: 48px;
+    height: 48px;
+
+    bottom: -2px;
+    right: 18px;
+  }
+
+  /* CONNECTING CURVE LINE */
+
+  .curve-line {
+    display: none;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .about {
+    padding: 70px 14px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 12px;
+  }
+
+  .circle-image {
+    width: 210px;
+    height: 210px;
   }
 
   .top-triangle {
-    width: 55px;
-    height: 55px;
-    right: 35px;
+    width: 44px;
+    height: 44px;
+    right: 12px;
   }
 
-  .left-triangle,
+  .left-triangle {
+    width: 42px;
+    height: 42px;
+    left: 12px;
+  }
+
   .right-triangle {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
+    right: 12px;
+  }
+
+  .read-line {
+    width: 65px;
   }
 }

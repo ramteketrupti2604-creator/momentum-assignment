@@ -1,25 +1,45 @@
+/* src/styles/testimonials.css */
+
 .testimonials {
   position: relative;
+
   width: 100%;
   min-height: 720px;
+
   background: #f5f5f5;
+
   overflow: hidden;
-  padding-top: 80px;
-  font-family: 'Inter', sans-serif;
+
+  padding: 90px 20px 100px;
+
+  font-family: "Inter", sans-serif;
 }
 
+/* ========================= */
 /* HEADING */
+/* ========================= */
+
 .testimonial-heading {
   text-align: center;
-  margin-bottom: 60px;
+
+  margin-bottom: 70px;
+
+  position: relative;
+  z-index: 2;
 }
 
 .testimonial-heading h2 {
   font-size: 54px;
   line-height: 1;
+
   font-weight: 500;
-  color: #111;
+
+  color: #111111;
+
+  letter-spacing: -1px;
 }
+
+/* YELLOW UNDERLINE */
 
 .yellow-line {
   position: relative;
@@ -28,38 +48,62 @@
 
 .yellow-line::after {
   content: "";
+
   position: absolute;
+
   left: 0;
   bottom: 4px;
+
   width: 100%;
   height: 8px;
+
   background: #fcd34d;
+
   border-radius: 20px;
+
   z-index: -1;
+
   transform: rotate(-2deg);
 }
 
+/* ========================= */
 /* REVIEW CARD */
+/* ========================= */
+
 .review-card {
   width: 500px;
+
   background: #eef2ee;
+
   margin: 0 auto;
+
   border-radius: 28px;
+
   padding: 45px 50px;
+
   text-align: center;
+
   position: relative;
+
+  z-index: 2;
 }
 
 .review-card p {
   font-size: 17px;
   line-height: 1.8;
-  color: #333;
+
+  color: #333333;
 }
+
+/* QUOTES */
 
 .quote {
   position: absolute;
+
   font-size: 90px;
+
   color: #d1d5db;
+
   font-weight: 700;
 }
 
@@ -73,16 +117,23 @@
   right: 20px;
 }
 
+/* ========================= */
 /* BIG IMAGES */
+/* ========================= */
+
 .big-img {
   position: absolute;
+
   border-radius: 50%;
   object-fit: cover;
+
+  z-index: 1;
 }
 
 .left-big {
   width: 150px;
   height: 150px;
+
   left: 120px;
   top: 250px;
 }
@@ -90,21 +141,30 @@
 .right-big {
   width: 170px;
   height: 170px;
+
   right: 80px;
   top: 300px;
 }
 
+/* ========================= */
 /* SMALL IMAGES */
+/* ========================= */
+
 .small-img {
   position: absolute;
+
   border-radius: 50%;
   object-fit: cover;
+
+  z-index: 1;
 }
 
 /* LEFT SIDE */
+
 .left-top {
   width: 70px;
   height: 70px;
+
   left: 70px;
   top: 60px;
 }
@@ -112,6 +172,7 @@
 .left-mid {
   width: 45px;
   height: 45px;
+
   left: 50px;
   top: 210px;
 }
@@ -119,14 +180,17 @@
 .left-bottom {
   width: 55px;
   height: 55px;
+
   left: 35px;
   top: 430px;
 }
 
 /* RIGHT SIDE */
+
 .right-top {
   width: 85px;
   height: 85px;
+
   right: 70px;
   top: 60px;
 }
@@ -134,6 +198,7 @@
 .right-mid {
   width: 45px;
   height: 45px;
+
   right: 170px;
   top: 130px;
 }
@@ -141,46 +206,195 @@
 .right-center {
   width: 65px;
   height: 65px;
+
   right: 120px;
   top: 220px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px) {
 
   .testimonials {
-    padding: 60px 20px;
     min-height: auto;
+    padding: 80px 20px;
   }
 
   .testimonial-heading h2 {
-    font-size: 36px;
+    font-size: 44px;
+  }
+
+  .review-card {
+    width: 90%;
+    max-width: 500px;
+
+    padding: 40px 35px;
+  }
+
+  .review-card p {
+    font-size: 15px;
+  }
+
+  .left-big {
+    width: 120px;
+    height: 120px;
+
+    left: 30px;
+    top: 280px;
+  }
+
+  .right-big {
+    width: 130px;
+    height: 130px;
+
+    right: 30px;
+    top: 320px;
+  }
+
+  .left-top {
+    left: 20px;
+  }
+
+  .right-top {
+    right: 20px;
+  }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .testimonials {
+    padding: 60px 18px 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .testimonial-heading {
+    margin-bottom: 30px;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .yellow-line::after {
+    height: 6px;
+    bottom: 2px;
   }
 
   .review-card {
     width: 100%;
-    padding: 35px 25px;
+
+    border-radius: 22px;
+
+    padding: 35px 22px;
   }
 
   .review-card p {
     font-size: 14px;
+    line-height: 1.7;
   }
+
+  .quote {
+    font-size: 60px;
+  }
+
+  .left-quote {
+    left: 14px;
+    top: 8px;
+  }
+
+  .right-quote {
+    right: 14px;
+    bottom: -18px;
+  }
+
+  /* MOBILE IMAGES */
 
   .big-img,
   .small-img {
     position: static;
-    margin: 10px;
+
+    margin: 0;
+
+    transform: none;
+  }
+
+  .images-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 20px;
   }
 
   .left-big,
   .right-big {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 
+  .left-top,
+  .left-mid,
+  .left-bottom,
+  .right-top,
+  .right-mid,
+  .right-center {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
   .testimonials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 50px 14px 60px;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 28px;
+  }
+
+  .review-card {
+    padding: 28px 18px;
+  }
+
+  .review-card p {
+    font-size: 13px;
+  }
+
+  .quote {
+    font-size: 48px;
+  }
+
+  .left-big,
+  .right-big {
+    width: 90px;
+    height: 90px;
+  }
+
+  .left-top,
+  .left-mid,
+  .left-bottom,
+  .right-top,
+  .right-mid,
+  .right-center {
+    width: 48px;
+    height: 48px;
   }
 }

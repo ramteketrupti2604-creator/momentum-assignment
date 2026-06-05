@@ -1,44 +1,137 @@
+/* src/styles/navbar.css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 50px;   /* GAP REDUCED */
-  background: white;
+
+  padding: 18px 50px;
+
+  background: #ffffff;
+
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
+
   z-index: 100;
+
+  box-sizing: border-box;
 }
+
+/* LOGO */
 
 .nav-logo {
   font-size: 18px;
   font-weight: 600;
+  color: #111111;
 }
+
+/* NAV LINKS */
 
 .nav-links {
   display: flex;
-  gap: 28px; /* reduced gap */
+  align-items: center;
+
+  gap: 28px;
+
   list-style: none;
+
   font-size: 14px;
-  color: #333;
+  color: #333333;
+
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
   cursor: pointer;
+  transition: 0.3s ease;
 }
+
+.nav-links li:hover {
+  color: #000000;
+}
+
+/* MENU ICON */
 
 .nav-menu {
   display: flex;
   flex-direction: column;
+
   gap: 4px;
+
+  cursor: pointer;
 }
 
 .nav-menu span {
   width: 24px;
   height: 2px;
-  background: black;
+
+  background: #000000;
+
+  border-radius: 10px;
 }
 
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    padding: 16px 32px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 13px;
+  }
+
+  .nav-logo {
+    font-size: 17px;
+  }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .nav-menu span {
+    width: 22px;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .nav-logo {
+    font-size: 15px;
+  }
+
+  .nav-menu span {
+    width: 20px;
+    height: 2px;
+  }
 }
