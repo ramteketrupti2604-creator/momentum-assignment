@@ -1,0 +1,186 @@
+.testimonials {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding-top: 80px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADING */
+.testimonial-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonial-heading h2 {
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 500;
+  color: #111;
+}
+
+.yellow-line {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 8px;
+  background: #fcd34d;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+/* REVIEW CARD */
+.review-card {
+  width: 500px;
+  background: #eef2ee;
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 45px 50px;
+  text-align: center;
+  position: relative;
+}
+
+.review-card p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.quote {
+  position: absolute;
+  font-size: 90px;
+  color: #d1d5db;
+  font-weight: 700;
+}
+
+.left-quote {
+  top: 10px;
+  left: 20px;
+}
+
+.right-quote {
+  bottom: -30px;
+  right: 20px;
+}
+
+/* BIG IMAGES */
+.big-img {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.left-big {
+  width: 150px;
+  height: 150px;
+  left: 120px;
+  top: 250px;
+}
+
+.right-big {
+  width: 170px;
+  height: 170px;
+  right: 80px;
+  top: 300px;
+}
+
+/* SMALL IMAGES */
+.small-img {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* LEFT SIDE */
+.left-top {
+  width: 70px;
+  height: 70px;
+  left: 70px;
+  top: 60px;
+}
+
+.left-mid {
+  width: 45px;
+  height: 45px;
+  left: 50px;
+  top: 210px;
+}
+
+.left-bottom {
+  width: 55px;
+  height: 55px;
+  left: 35px;
+  top: 430px;
+}
+
+/* RIGHT SIDE */
+.right-top {
+  width: 85px;
+  height: 85px;
+  right: 70px;
+  top: 60px;
+}
+
+.right-mid {
+  width: 45px;
+  height: 45px;
+  right: 170px;
+  top: 130px;
+}
+
+.right-center {
+  width: 65px;
+  height: 65px;
+  right: 120px;
+  top: 220px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .testimonials {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 36px;
+  }
+
+  .review-card {
+    width: 100%;
+    padding: 35px 25px;
+  }
+
+  .review-card p {
+    font-size: 14px;
+  }
+
+  .big-img,
+  .small-img {
+    position: static;
+    margin: 10px;
+  }
+
+  .left-big,
+  .right-big {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

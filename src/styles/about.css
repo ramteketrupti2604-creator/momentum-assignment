@@ -1,0 +1,250 @@
+/* src/styles/about.css */
+
+.about {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  padding: 120px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* TOP BLUR */
+
+.top-blur {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 280px;
+  background: rgba(252, 165, 165, 0.35);
+  filter: blur(90px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* MAIN CONTAINER */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ROWS */
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.top-row {
+  margin-bottom: 110px;
+}
+
+/* TEXT */
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.about-text p {
+  max-width: 430px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #666666;
+  margin-bottom: 28px;
+}
+
+/* READ MORE */
+
+.about-text a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.read-line {
+  width: 120px;
+  height: 1px;
+  background: #111111;
+}
+
+/* YELLOW SCRIBBLE */
+
+.yellow-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 100%;
+  height: 7px;
+  background: #fcd34d;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+/* GREEN PILL */
+
+.green-pill {
+  background: #d1fae5;
+  padding: 2px 14px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* IMAGE BOX */
+
+.image-box {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGES */
+
+.circle-image {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* TRIANGLES */
+
+.triangle {
+  position: absolute;
+  background: #f87171;
+  z-index: 3;
+}
+
+/* TOP IMAGE TRIANGLE */
+/* IMAGE KO TOUCH KAR RAHA HAI */
+
+.top-triangle {
+  width: 78px;
+  height: 78px;
+  top: 12px;
+  right: 92px;
+
+  clip-path: polygon(100% 0, 0 20%, 78% 100%);
+}
+
+/* BOTTOM IMAGE TOP LEFT TRIANGLE */
+/* IMAGE KO CHIPKA HUA */
+
+.left-triangle {
+  width: 68px;
+  height: 68px;
+
+  top: 18px;
+  left: 78px;
+
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+/* BOTTOM IMAGE RIGHT TRIANGLE */
+/* IMAGE KE NICHE RIGHT KO TOUCH */
+
+.right-triangle {
+  width: 70px;
+  height: 70px;
+
+  bottom: -6px;
+  right: 78px;
+
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+/* RED CURVE LINE */
+
+.curve-line {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 920px;
+  height: 520px;
+  z-index: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .about-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text p {
+    margin: 0 auto 30px;
+  }
+
+  .about-text a {
+    justify-content: center;
+  }
+
+  .curve-line {
+    display: none;
+  }
+
+  .top-row {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about {
+    padding: 80px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .circle-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .top-triangle {
+    width: 55px;
+    height: 55px;
+    right: 35px;
+  }
+
+  .left-triangle,
+  .right-triangle {
+    width: 50px;
+    height: 50px;
+  }
+}

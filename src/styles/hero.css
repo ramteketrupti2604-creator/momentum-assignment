@@ -1,0 +1,230 @@
+/* src/styles/hero.css */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding: 120px 40px 80px;
+  font-family: "Inter", sans-serif;
+}
+
+/* LEFT CURVE LINES */
+
+.left-curves {
+  position: absolute;
+  left: -10px;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* MAIN CONTENT */
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* HEADING */
+
+.hero-heading {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: #111111;
+  letter-spacing: -2px;
+  margin-bottom: 26px;
+}
+
+/* YELLOW UNDERLINE */
+
+.yellow-line {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 8px;
+  background: #fcd34d;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+/* PINK PILL */
+
+.pink-pill {
+  background: #f9a8d4;
+  padding: 2px 18px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+/* GREEN PILL */
+
+.green-pill {
+  background: #d1fae5;
+  padding: 2px 18px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+/* PURPLE SHAPE IMAGE */
+
+.purple-shape-img {
+  width: 58px;
+  height: 58px;
+  margin-left: 12px;
+  vertical-align: middle;
+  transform: rotate(-18deg) translateY(-4px);
+}
+
+/* SUBTEXT */
+
+.hero-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #5b5b5b;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+/* PEOPLE ROW */
+
+.people-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 55px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* GROUPS */
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* PERSON IMAGES */
+
+.person {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* SIZES */
+
+.small {
+  width: 92px;
+  height: 92px;
+}
+
+.medium {
+  width: 105px;
+  height: 105px;
+}
+
+.last-person {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(18px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* UP DOWN EFFECT */
+
+.up {
+  transform: translateY(-24px);
+}
+
+.down {
+  transform: translateY(24px);
+}
+
+/* GROUP POSITION */
+
+.left-group {
+  margin-right: 10px;
+}
+
+.center-group {
+  margin-right: 10px;
+}
+
+.right-group {
+  margin-right: 10px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 992px) {
+  .hero-heading {
+    font-size: 54px;
+  }
+
+  .people-row {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .left-curves {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .purple-shape-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-text {
+    font-size: 13px;
+    margin-bottom: 50px;
+  }
+
+  .people-row {
+    gap: 24px;
+  }
+
+  .small,
+  .medium,
+  .last-person {
+    width: 75px;
+    height: 75px;
+  }
+
+  .up {
+    transform: translateY(-10px);
+  }
+
+  .down {
+    transform: translateY(10px);
+  }
+}
